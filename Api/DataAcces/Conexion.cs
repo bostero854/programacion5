@@ -8,21 +8,14 @@ namespace Api.DataAcces
     {
         public static string StringConexion()
         {
-            string Conexion;
-
-            var builder = new ConfigurationBuilder()
-                   .SetBasePath(Directory.GetCurrentDirectory())
-                   .AddJsonFile("appsettings.json");
-
             try
             {
 
-                var configuration = builder.Build();
 
-                Conexion = "Server=" + configuration["ServidorBDA"] +
-                            "; Database=" + configuration["BaseDatos"] +
-                            "; User id=" + configuration["Usuario"] +
-                            "; Password=" + configuration["Pass"] + ";";
+                string Conexion = "Server=" + Environment.GetEnvironmentVariable("SQL_SERVICE") +
+                                       "; Database=" + Environment.GetEnvironmentVariable("SQL_DATABASE") +
+                                       "; User id=" + Environment.GetEnvironmentVariable("USERNAME_SQL") +
+                                       "; Password=" + Environment.GetEnvironmentVariable("PASSWORD_SQL") + ";";
 
                 return Conexion;
             }

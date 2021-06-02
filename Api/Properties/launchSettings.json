@@ -14,6 +14,10 @@
       "launchBrowser": true,
       "launchUrl": "swagger",
       "environmentVariables": {
+        "PASSWORD_SQL": "Bostero10",
+        "SQL_DATABASE": "prog5",
+        "USERNAME_SQL": "sa",
+        "SQL_SERVICE": "WIND_10_BPO",
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
