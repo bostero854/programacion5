@@ -11,7 +11,7 @@ namespace Api.Controllers
 
 
         [HttpPost()]
-        public IActionResult Post(IList<Models.Persona> personas)
+        public IActionResult Post([FromBody] IList<Models.Persona> personas)
         {
             Deal.Persona persona;
             try
